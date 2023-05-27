@@ -1,0 +1,27 @@
+[
+   {
+   "id": "1",
+   "title": "Meat",
+   "emoji":"🍖"
+ },
+ {
+   "id": "2",
+   "title": "Fast Food",
+   "emoji":"🍔"
+ },
+ {
+   "id": "3",
+   "title": "Sushi",
+   "emoji":"🍣"
+ },
+ {
+   "id": "4",
+   "title": "Mexican",
+   "emoji":"🌮"
+ },
+ {
+   "id": "5",
+   "title": "Tacos",
+   "emoji":"🫓"
+ }
+]

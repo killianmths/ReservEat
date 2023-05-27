@@ -1,0 +1,14 @@
+[
+   {
+   "id": "1",
+   "title": "Bil's Diner",
+   "picture":"https://lh5.googleusercontent.com/p/AF1QipMUiCk4quFjNl6lbVIFMQeMoyFKGMtA9STl3VK5=w750-h356-k-no",
+   "distance":"20"
+ },
+ {
+   "id": "2",
+   "title": "Les restos du coeur",
+   "picture":"https://www.pagesjaunes.fr/media/agc/resize/413x550/8b/17/a4/00/00/27/db/bc/a2/16/5d398b17a4000027dbbca216/5d398b17a4000027dbbca217.jpg",
+   "distance":"15"
+ }
+]
