@@ -23,7 +23,7 @@ const Scroll = () => {
   const renderItem = ({item}) => {
     const backgroundColor = item.id === selectedId ? '#FEA93C' : 'white';
     const color = item.id === selectedId ? 'white' : 'black';
-    const border = item.id === selectedId ? 0 : 2;
+    const border = item.id === selectedId ? 0:2 ;
 
     return (
       <Item
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection:'row',
-    marginTop: 20,
+    marginTop: 0,
     marginLeft:20
   },
   item: {

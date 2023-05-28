@@ -9,10 +9,15 @@ const Validation = ({ onPress }) => {
     <View style={styles.container}>
         <TouchableOpacity style={styles.touchable}
             onPress={onPress}
-        >
-            <Text style={styles.text}>Reservation</Text>
-            <View style={{width:50, height:50, backgroundColor:'rgba(255,255,255,0.4)', borderRadius:50,borderWidth: 1,
-    borderColor: 'white', left:'80%', top:-25}}></View>
+            
+        ><View>
+          <Text style={styles.text}>Reservations</Text>
+        </View>
+        <View>
+          <View style={styles.circle}>
+            
+          </View>
+        </View>
         </TouchableOpacity>
     </View>
   );
@@ -20,13 +25,13 @@ const Validation = ({ onPress }) => {
 
 const styles = StyleSheet.create({
     container: {
-      width: '94%',
-      justifyContent:'center',
+      width: '95%',
       marginTop:20,
-      marginLeft:20,
-      height: 100,
+      marginLeft:10,
+      height: 130,
       padding: 10,
-      borderRadius:20,
+      
+      
       
     },
     touchable:{
@@ -34,13 +39,27 @@ const styles = StyleSheet.create({
         height:'100%',
         backgroundColor:'#FEA93C',
         borderRadius:20,
+        flex:1,
+        justifyContent:'space-between',
+        flexDirection:'row',
+        borderRadius:30,
     },
     text:{
         color:'white',
         fontWeight:600,
         fontSize:22,
         marginLeft:15,
-        marginTop:15,
+        marginTop:20,
+
+    },
+    circle:{
+      borderRadius:50,
+      width:70,
+      backgroundColor:'white',
+      height:70,
+      opacity:0.5,
+      margin:20
+      
 
     }
   });
