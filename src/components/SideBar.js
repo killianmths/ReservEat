@@ -19,7 +19,7 @@ input:{
    justifyContent:'center',
    flexDirection:'row',
    alignItems:'center',
-   width:370,
+   width:375,
    margin:20,
    borderRadius:20,
    height:60,
