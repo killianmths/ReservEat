@@ -8,8 +8,10 @@ import {
   StatusBar,
   Image
 } from 'react-native';
+import { TouchableOpacity } from 'react-native-web';
 
-const DATA = require('../data/Restaurants.json')
+const temp = require('../data/Restaurants.json');
+const DATA = temp.slice(0,5)
 
 const Item = ({title,distance,picture}) => (
   <View style={styles.item}>
