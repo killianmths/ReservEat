@@ -1,5 +1,4 @@
-import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
-import Icon from 'react-native-vector-icons/FontAwesome';
+
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
@@ -37,7 +36,7 @@ const styles = StyleSheet.create({
     touchable:{
         width:'100%',
         height:'100%',
-        backgroundColor:'#FEA93C',
+        backgroundColor:'#ffa401',
         borderRadius:20,
         flex:1,
         justifyContent:'space-between',

@@ -23,8 +23,8 @@ export default function App2({navigation}) {
         <SideBar/>
         <Scroll/>
         <PopResto onPress={ () => navigation.navigate("SeeAll")}/>
-        <SecondScroll/>
-        <Validation onPress={ ()=>navigation.navigate("Retour")}></Validation>
+        <SecondScroll navigation={navigation}/>
+        <Validation onPress={ ()=>navigation.navigate("BookingPages")}></Validation>
       </ScrollView>
     </View>
 

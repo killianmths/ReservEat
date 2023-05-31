@@ -24,7 +24,7 @@ export default function MyPicker() {
 
 const styles = StyleSheet.create({
   item:{
-    height:200,
+    height:100,
   },
   itemText:{
     paddingRight:20,

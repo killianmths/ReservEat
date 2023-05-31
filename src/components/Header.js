@@ -30,7 +30,7 @@ hello:{
    color:'grey'
  },
  button:{
-   backgroundColor:'red',
+   backgroundColor:'#ffa401',
    width:50,
    marginRight:20,
    height:50,

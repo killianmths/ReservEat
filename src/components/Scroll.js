@@ -21,7 +21,7 @@ const Scroll = () => {
   const [selectedId, setSelectedId] = useState();
 
   const renderItem = ({item}) => {
-    const backgroundColor = item.id === selectedId ? '#FEA93C' : 'white';
+    const backgroundColor = item.id === selectedId ? '#ffa401' : 'white';
     const color = item.id === selectedId ? 'white' : 'black';
     const border = item.id === selectedId ? 0:2 ;
 

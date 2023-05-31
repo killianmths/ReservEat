@@ -9,10 +9,12 @@ import {
   TouchableOpacity,
   Image
 } from 'react-native';
+import { useNavigation, useRoute } from '@react-navigation/native';
+import Restaurant from './RestaurantScreen.js';
 
 const DATA = require('../data/Restaurants.json')
 
-const Item = ({item, onPress, textColor, borderWidth, title, picture, distance,adresse}) => (
+const Item = ({onPress, title, picture, distance,adresse}) => (
   <TouchableOpacity onPress={onPress} style={styles.item}>
     <View style={styles.textContainer}>
       <Text style={styles.title}>{title}</Text>
@@ -24,7 +26,8 @@ const Item = ({item, onPress, textColor, borderWidth, title, picture, distance,a
   </TouchableOpacity>
 );
 
-function ScrollableRestaurant() {
+const ScrollableRestaurant = () => {
+  const navigation = useNavigation()
   const [selectedId, setSelectedId] = useState();
 
   const renderItem = ({item}) => {
@@ -32,11 +35,8 @@ function ScrollableRestaurant() {
     return (
       <Item
         item={item}
-        onPress={() => setSelectedId(item.id)}
-        backgroundColor={backgroundColor}
-        textColor={color}
-        borderWidth={border}
-      />
+        onPress={ () => navigation.navigate("Restaurant", { data: item })}
+        title={item.title}  distance={item.distance} picture={item.picture} pictures={item.pictures}/>
     );
   };
 
@@ -48,7 +48,7 @@ function ScrollableRestaurant() {
          vertical={true}
          showsVerticalScrollIndicator={false}
         data={DATA}
-        renderItem={({item}) => <Item title={item.title}  distance={item.distance} picture={item.picture} adresse={item.adresse}/>}
+        renderItem={renderItem}
         keyExtractor={item => item.id}
         extraData={selectedId}
       />

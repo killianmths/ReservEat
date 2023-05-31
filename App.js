@@ -6,6 +6,9 @@ import SeeAll from './src/components/SeeAllscreen.js'
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import BookingPages from './src/components/BookingPage';
+import SecondScroll from './src/components/SecondScroll';
+import { useNavigation, useRoute } from '@react-navigation/native';
+import ScrollableRestaurant from './src/components/ScrollableRestaurant';
 
 
 const Stack = createNativeStackNavigator();
@@ -40,10 +43,11 @@ export default function App() {
         options={{ headerShown: false }}
         />
         <Stack.Screen 
-        name='Retour'
+        name='BookingPages'
         component={BookingPages}
         options={{ headerShown: false }}
         />
+        
         
 
       </Stack.Navigator>
