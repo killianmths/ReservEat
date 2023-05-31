@@ -6,28 +6,48 @@ import {
   StyleSheet,
   Text,
   StatusBar,
-  Image
+  Image,
+  NavLink
 } from 'react-native';
+import { TouchableOpacity } from 'react-native';
+import { useState } from 'react';
+import Restaurant from './RestaurantScreen.js'
+import { useNavigation, useRoute } from '@react-navigation/native';
 
-const DATA = require('../data/Restaurants.json')
 
-const Item = ({title,distance,picture}) => (
-  <View style={styles.item}>
+const temp = require('../data/Restaurants.json');
+const DATA = temp.slice(0,5)
+
+const Item = ({item,title,distance,picture,onPress,pictures}) => (
+  <TouchableOpacity onPress={onPress} style={styles.item}>
     <Text style={styles.title}>{title}</Text>
-    <Image source={{uri:picture}} style={{width:200,height:200, resizeMode:'contain', marginLeft:35, marginTop:10}}/>
+    <Image source={{uri:picture}} style={{width:200,height:170,borderRadius:25, resizeMode:'stretch', marginLeft:35, marginTop:"10%"}}/>
     <Text style={styles.time}>⏱{distance} min</Text>
-  </View>
+  </TouchableOpacity>
 );
 
 const SecondScroll = () => {
+  const navigation =useNavigation()
+  const [selectedId, setSelectedId]=useState();
+
+  const renderItem =({item}) => {
+
+  return ( 
+    <Item 
+    item={item}
+    onPress={ () => navigation.navigate("Restaurant", { data: item })}
+    title={item.title}  distance={item.distance} picture={item.picture} pictures={item.pictures}/>
+  );
+  };
   return (
     <SafeAreaView style={styles.container}>
       <FlatList
       horizontal={true}
       showsHorizontalScrollIndicator={false}
         data={DATA}
-        renderItem={({item}) => <Item title={item.title}  distance={item.distance} picture={item.picture}/>}
+        renderItem={renderItem}
         keyExtractor={item => item.id}
+        extraData={selectedId}
       />
     </SafeAreaView>
   );
